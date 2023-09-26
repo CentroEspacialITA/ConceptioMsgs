@@ -1,0 +1,7 @@
+string agent-type
+string agent-uuid
+string levels
+string name
+float64 rate
+float64 stamp
+string type
