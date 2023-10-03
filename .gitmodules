@@ -1,0 +1,4 @@
+[submodule "geographic_info"]
+	path = geographic_info
+	url = https://github.com/ros-geographic-info/geographic_info.git
+	branch = ros2
