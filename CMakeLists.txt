@@ -17,6 +17,8 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   msg/CapellaTrigger.msg
   msg/ArenaKinematics.msg
   msg/ArenaHeartbeat.msg
+  msg/ArenaEntities.msg
+  srv/RequestArenaEntityList.srv
   DEPENDENCIES geographic_msgs
 )
 

@@ -1,0 +1,9 @@
+# Service that returns all entities information 
+# Request parameters: 
+# Response parameters: name and UUID of the entity, domain (air, ground, maritime, space, cyberpace),
+# and type (real, virtual, model).
+---
+string[] entity_name
+string[] entity_uuid
+string[] domain
+string[] type

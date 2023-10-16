@@ -1,4 +1,5 @@
 string entity_type
+string entity_domain
 string entity_uuid
 string entity_name
 float64 heartbeat_rate
