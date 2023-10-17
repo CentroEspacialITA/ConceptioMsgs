@@ -15,7 +15,8 @@ jobs:
     name: Submodule update
     runs-on: ubuntu-latest
     env:
-      PARENT_REPOSITORY: 'conceptiolab/conceptio_bridges'
+      CONCEPTIO_BRIDGES_REPO: 'conceptiolab/conceptio_bridges'
+      CONECPTIO_CORE_REPO: 'conceptiolab/conceptio_core'
       CHECKOUT_BRANCH: 'main'
       PR_AGAINST_BRANCH: 'main'
       OWNER: 'conceptiolab'
@@ -30,12 +31,22 @@ jobs:
       ####################################
       # Run the action against code base #
       ####################################
-      - name: run action
-        id: run_action
+      - name: run action in first repo
+        id: run_action_first_repo
         uses: releasehub-com/github-action-create-pr-parent-submodule@v1
         with:
           github_token: ${{ secrets.RELEASE_HUB_SECRET }}
-          parent_repository: ${{ env.PARENT_REPOSITORY }}
+          parent_repository: ${{ env.CONCEPTIO_BRIDGES_REPO }}
+          checkout_branch: ${{ env.CHECKOUT_BRANCH}}
+          pr_against_branch: ${{ env.PR_AGAINST_BRANCH }}
+          owner: ${{ env.OWNER }}
+          
+      - name: run action in second repo
+        id: run_action_second_repo
+        uses: releasehub-com/github-action-create-pr-parent-submodule@v1
+        with:
+          github_token: ${{ secrets.RELEASE_HUB_SECRET }}
+          parent_repository: ${{ env.CONECPTIO_CORE_REPO }}
           checkout_branch: ${{ env.CHECKOUT_BRANCH}}
           pr_against_branch: ${{ env.PR_AGAINST_BRANCH }}
           owner: ${{ env.OWNER }}
