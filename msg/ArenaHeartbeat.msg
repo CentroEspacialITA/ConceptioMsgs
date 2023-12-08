@@ -1,8 +1,8 @@
-string entity_type
-string entity_domain
-string entity_uuid
-string entity_name
-string entity_visual_definition
-float64 heartbeat_rate
+string type
+string domain
+string uuid
+string name
+string visual
+float64 rate
 float64 stamp
 string type
