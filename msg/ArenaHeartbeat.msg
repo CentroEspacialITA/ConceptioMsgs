@@ -4,5 +4,4 @@ string uuid
 string name
 string visual
 float64 rate
-float64 stamp
-string type
+float64 stamps
