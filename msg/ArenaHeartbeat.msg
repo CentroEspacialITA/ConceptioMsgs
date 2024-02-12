@@ -5,3 +5,4 @@ string name
 string visual
 float64 rate
 float64 stamps
+string owner
